@@ -59,6 +59,8 @@ client.registry
 	.registerGroup('math', 'Math')
 	.registerGroup('kings','Kings')
 	.registerGroup('garage','Garage')
+	.registerGroup('pokemon','Pokemon')
+	.registerGroup('rockgame','Rockgame')
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 client.login(TOKEN);
