@@ -19,7 +19,7 @@ client
 		console.log(`Client ready; logged in as ${client.user.username}#${client.user.discriminator} (${client.user.id})`);
 	})
 	.on('disconnect', () => { console.warn('Disconnected!'); })
-	.on('reconnecting', () => { console.warn('Reconnecting...'); })
+	.on('reconnecting', () => { console.warn('Reconnecting'); })
 	.on('commandError', (cmd, err) => {
 		if(err instanceof commando.FriendlyError) return;
 		console.error(`Error in command ${cmd.groupID}:${cmd.memberName}`, err);
@@ -59,5 +59,4 @@ client.registry
 	.registerGroup('math', 'Math')
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
-
 client.login(TOKEN);
