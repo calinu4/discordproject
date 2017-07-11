@@ -11,7 +11,6 @@ module.exports = class AddNumbersCommand extends commando.Command {
 			description: 'Adds numbers together.',
 			details: oneLine`
 				This is an incredibly useful command that finds the sum of numbers.
-				This command is the envy of all other commands.
 			`,
 			examples: ['add-numbers 42 1337'],
 
@@ -29,6 +28,7 @@ module.exports = class AddNumbersCommand extends commando.Command {
 
 	async run(msg, args) {
 		const total = args.numbers.reduce((prev, arg) => prev + parseFloat(arg), 0);
+	    
 		return msg.reply(`${args.numbers.join(' + ')} = **${total}**`);
 	}
 };

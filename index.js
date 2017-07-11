@@ -57,6 +57,7 @@ client.setProvider(
 
 client.registry
 	.registerGroup('math', 'Math')
+	.registerGroup('kings','Kings')
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 client.login(TOKEN);

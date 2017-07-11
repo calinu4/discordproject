@@ -19,7 +19,7 @@ module.exports = class SquareCommand extends commando.Command {
 					label: 'number',
 					prompt: 'What number would like to square?',
 					type: 'float',
-					infinite: true
+					infinite: false
 				}
 			]
 		});
