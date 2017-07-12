@@ -22,7 +22,6 @@ module.exports = class CarAddCommand extends Command {
 					key: 'poke1',
 					prompt: 'What is the type of first Pokemon?\n',
 					type: 'string',
-					parse: str => str.toLowerCase(),
 					validate: async (poke1, msg) => {
                         var isFound=false;
                         for(var i=0;i<pokemonTypes.length;i++)
@@ -40,7 +39,6 @@ module.exports = class CarAddCommand extends Command {
 					key: 'poke2',
 					prompt: 'What is the type of second Pokemon?\n',
 					type: 'string',
-					parse: str => str.toLowerCase(),
                     validate: async (poke2, msg) => {
                         var isFound=false;
                         for(var i=0;i<pokemonTypes.length;i++)
