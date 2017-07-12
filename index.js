@@ -60,6 +60,7 @@ client.registry
 	.registerGroup('kings','Kings')
 	.registerGroup('garage','Garage')
 	.registerGroup('pokemon','Pokemon')
+	.registerGroup('youtube','Youtube')
 	.registerGroup('rockgame','Rockgame')
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
