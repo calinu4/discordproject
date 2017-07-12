@@ -33,7 +33,7 @@ module.exports = class CarAddCommand extends Command {
                        if(isFound)
                         var res=r.displayRes(choice);
                         else
-                        return `Choose a valid word from: ${gamewords.toString()}`
+                        return `Choose a valid word from : ${gamewords.toString()}`
                         console.log(res)
                         console.log(r.getCount())
                         if(r.getCount()>=10)

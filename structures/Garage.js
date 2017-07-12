@@ -5,7 +5,7 @@ class Garage {
   }
 
 openGarage(){
-  this.checkIn("Audi", "yf10rgh", "A6", 0, 1, 1);
+    this.checkIn("Audi", "yf10rgh", "A6", 0, 1, 1);
     this.checkIn("Bmw", "rf11rth", "5 series", 1, 0, 1);
     this.checkIn("Mercedes", "yf14rgj", "E class", 0, 2, 1);
     this.checkIn("Vauxhall", "yf15rgf", "Insignia", 1, 3, 1);
@@ -14,9 +14,11 @@ openGarage(){
 
   checkIn(m, r, m1, sf, mf, lf) {
     cars[cars.length] = { make: m, reg: r, model: m1, smallfaults: sf, mediumfaults: mf, largefaults: lf };
-    console.log("New car added: " + m + " " + m1);
   }
-
+  
+  returnCarsLength(){
+    return cars.length;
+  }
 
   checkOut(id) {
 
@@ -48,11 +50,11 @@ openGarage(){
       if (registration === cars[i].reg) {
          total = cars[i].smallfaults * 10 + cars[i].mediumfaults * 20 + cars[i].largefaults * 30;
         
-        break;
+       return total+" £";
       }
     }
-    return total+" £";
-    //return "No car found!";
+    
+    return "No car found!";
   }
 
   emptyList() {

@@ -4,7 +4,7 @@
   "description": "a simple bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test":"mocha"
   },
   "author": "Calin",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "discord.js": "^11.1.0",
     "discord.js-commando": "^0.9.0",
     "jsonfile": "^3.0.1",
+    "mocha": "^3.4.2",
     "request": "^2.81.0",
     "sqlite": "^2.8.0",
     "xmlhttprequest": "^1.8.0"
