@@ -19,6 +19,7 @@ class King{
     
         
          displayResult(choice) {
+             s="";
             for (var i = 0; i < obj.length; i++) {
                 if (obj[i].nm === choice) {
                     s = s + obj[i].nm + ", " + obj[i].cty + ", " + obj[i].hse + ", " + obj[i].yrs;

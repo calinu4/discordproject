@@ -3,19 +3,19 @@ var King = require("../structures/King");
 var k=new King();
 
 describe("King Tests", function () {
-    describe("Displaying Cnut Information from loaded JSON file", function () {
-        it("Searching for Cnut should return some string information", function () {
-        
-          assert.equal("","");
-        });
-    });
+      
+   
+        this.timeout(5000);
+        it("Retrieving data from JSON file", function (done) {
+          setTimeout(done, 1000);
+        });  
 
-    describe("Displaying Cnut Information from loaded JSON file", function () {
-        it("Searching for Cnut should return some string information", function () {
+        it("Searching for Cnut should return all details for Cnut King", function () {  
            var s=k.displayResult("Cnut");
-          assert.equal("",s);
+          assert.equal("Cnut, United Kingdom, House of Denmark, 1016-1035",s);
+        
         });
-    });
+
 
     });
   
