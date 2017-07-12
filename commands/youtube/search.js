@@ -2,7 +2,7 @@
 const commando = require('discord.js-commando');
 const oneLine = require('common-tags').oneLine;
 const YouTube = require("discord-youtube-api");
-const privateStuff=require("./youtubekey.js")
+const privateStuff=require("../../youtubekey")
 const TOKEN=privateStuff.key
 const youtube = new YouTube(TOKEN);
 module.exports = class YoutubeCommand extends commando.Command {
