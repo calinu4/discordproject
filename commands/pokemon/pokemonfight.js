@@ -2,6 +2,7 @@ const { Command } = require('discord.js-commando');
 
 const Pokemon = require('../../structures/Pokemon');
 const p = new Pokemon();
+var e = require("discord-emoji");
 const pokemonTypes=["normal","fire","water","electric","grass","ice","fighting","poison","ground","flying","psychic","bug","rock","ghost","dragon","dark","steel","fairy"];
 module.exports = class CarAddCommand extends Command {
 	constructor(client) {
@@ -61,6 +62,7 @@ module.exports = class CarAddCommand extends Command {
 	
 
 	async run(msg, {poke1,poke2}) {
-		return msg.reply(`${poke1} VS ${poke2}=`+p.displayRes(poke1,poke2));
+		const emo=e.symbols.vs;
+		return msg.reply(`${poke1} ${emo} ${poke2}=`+p.displayRes(poke1,poke2));
 	}
 };

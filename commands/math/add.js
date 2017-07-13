@@ -33,7 +33,7 @@ module.exports = class AddNumbersCommand extends commando.Command {
 
 	async run(msg,{number1,number2}) {
 		const total = number1+number2;
-	    var e=emoji.symbols.green_heart;
-		return msg.reply(`${number1}+${number2} = **${total}**    ${e}`);
+	    var e=emoji.symbols.ok;
+		return msg.reply(`${e} ${number1}+${number2} = **${total}**`);
 	}
 };

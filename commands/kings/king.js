@@ -2,7 +2,7 @@ const commando = require('discord.js-commando');
 const oneLine = require('common-tags').oneLine;
 const King=require('../../structures/King');
 var k=new King();
-
+var e = require("discord-emoji");
 module.exports = class FindKingCommand extends commando.Command {
     constructor(client) {
         super(client, {
@@ -30,10 +30,10 @@ module.exports = class FindKingCommand extends commando.Command {
 
     async run(msg,{word}) {
         var s=k.displayResult(word);
-
+        const emo=e.people.crown;
         if(s=="")
         return msg.reply("No king found!");
         else
-        return msg.reply(`King details: ${s}`);
+        return msg.reply(`${emo} King details: ${s}`);
     }
 };
