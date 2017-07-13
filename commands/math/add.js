@@ -16,19 +16,24 @@ module.exports = class AddNumbersCommand extends commando.Command {
 
 			args: [
 				{
-					key: 'numbers',
-					label: 'number',
-					prompt: 'What numbers would you like to add? Every message you send will be interpreted as a single number.',
-					type: 'float',
-					infinite: true
+					key: 'number1',
+					prompt: 'What is the first number?\n',
+					type: 'integer'
+					
+				},
+				{
+					key: 'number2',
+					prompt: 'What is the second number?\n',
+					type: 'integer'
+					
 				}
 			]
 		});
 	}
 
-	async run(msg, args) {
-		const total = args.numbers.reduce((prev, arg) => prev + parseFloat(arg), 0);
+	async run(msg,{number1,number2}) {
+		const total = number1+number2;
 	    
-		return msg.reply(`${args.numbers.join(' + ')} = **${total}**`);
+		return msg.reply(`${number1}+${number2} = **${total}**`);
 	}
 };

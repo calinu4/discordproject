@@ -18,21 +18,15 @@ module.exports = class SquareCommand extends commando.Command {
 					key: 'number',
 					label: 'number',
 					prompt: 'What number would like to square?',
-					type: 'float',
-					infinite: false
+					type: 'float'
 				}
 			]
 		});
 	}
 
-	async run(msg, args) {
-		const num = args.number
+	async run(msg, { number }) {
+		
 
-                    function returnSquare(num){
-                       return num*num;
-                    }
-                    var result1=returnSquare(num);
-               
-		return msg.reply(`Square of ${num} = **${result1}**`);
+		return msg.reply(`Square of ${number} = **${number*number}**`);
 	}
 };
