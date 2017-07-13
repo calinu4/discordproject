@@ -1,6 +1,6 @@
 const commando = require('discord.js-commando');
 const oneLine = require('common-tags').oneLine;
-
+var emoji = require("discord-emoji");
 module.exports = class AddNumbersCommand extends commando.Command {
 	constructor(client) {
 		super(client, {
@@ -33,7 +33,7 @@ module.exports = class AddNumbersCommand extends commando.Command {
 
 	async run(msg,{number1,number2}) {
 		const total = number1+number2;
-	    
-		return msg.reply(`${number1}+${number2} = **${total}**`);
+	    var e=emoji.symbols.green_heart;
+		return msg.reply(`${number1}+${number2} = **${total}**    ${e}`);
 	}
 };
