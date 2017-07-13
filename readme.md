@@ -1,6 +1,6 @@
-Discord Bot 
+<b>Discord Bot</b> 
 
-##This bot interact with the user using the following commands:
+This bot interact with the user using the following commands:
 *!add num1 num2
 *!square num
 *!open
