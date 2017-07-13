@@ -22,7 +22,7 @@ module.exports = class YoutubeCommand extends commando.Command {
                 {
                     key: 'word',
                     label: 'word',
-                    prompt: 'Search video?',
+                    prompt: 'Enter video keywords!',
                     type: 'string',
                     infinite: false
                 }
